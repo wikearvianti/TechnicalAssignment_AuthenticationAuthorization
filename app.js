@@ -43,7 +43,7 @@ app.post("/user", (req,res) => {
         res.send(message)
     }
 })
-
+ 
 app.get("/logout", (req,res) => {
     req.session.destroy();
     res.redirect("/");
@@ -52,3 +52,4 @@ app.get("/logout", (req,res) => {
 app.listen(3000, () => {
     console.log("App running");
 });
+ 
