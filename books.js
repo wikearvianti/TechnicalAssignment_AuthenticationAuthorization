@@ -19,7 +19,7 @@ const authenticateJWT = (req,res,next) => {
               return res.sendStatus(403);
           }
           req.user = user;
-          next();
+          next(); 
       });
   } else {
       res.sendStatus(401);
@@ -65,7 +65,7 @@ const books = [
         language: req.body.language,
         pages: req.body.pages,
         title: req.body.title,
-        year: req.body.year
+        year: req.body.year 
       }
       books.push(newBooks);
       res.send("Berhasil Ditambahkan")
@@ -77,3 +77,5 @@ const books = [
   app.listen(4000, () => {
     console.log(`Running in Port 4000`)
   });
+
+  
